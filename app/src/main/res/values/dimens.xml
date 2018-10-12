@@ -1,0 +1,66 @@
+<resources>
+
+    <dimen name="margin_small_regular">6dp</dimen>
+    <dimen name="margin_small_filter">8dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_semi_large">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_regular">10dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_xxlarge">64dp</dimen>
+    <dimen name="margin_xxxlarge">72dp</dimen>
+
+    <dimen name="padding_very_small">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_semi_medium">6dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_regular">10dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xlarge">32dp</dimen>
+    <dimen name="padding_xxlarge">64dp</dimen>
+
+    <dimen name="text_size_very_small">6sp</dimen>
+    <dimen name="text_size_tiny">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_semi_large">18sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_toolbar_title">16sp</dimen>
+    <dimen name="text_size_xlarge">24sp</dimen>
+    <dimen name="text_size_regular">14sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="spinner_container_height">70dp</dimen>
+    <dimen name="login_card_radius">4dp</dimen>
+    <dimen name="username_container_top_margin">16dp</dimen>
+    <dimen name="password_container_top_margin">24dp</dimen>
+    <dimen name="view_flipper_container_top_margin">16dp</dimen>
+    <dimen name="progressbar_width_height">48dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">125dp</dimen>
+
+    <dimen name="user_name_left_margin">15dp</dimen>
+    <dimen name="welcome_text_top_margin">16dp</dimen>
+    <dimen name="scan_result_top_margin">20dp</dimen>
+    <dimen name="scan_result_top_margin_small">10dp</dimen>
+    <dimen name="scan_result_top_margin_medium">30dp</dimen>
+    <dimen name="scan_result_top_margin_large">35dp</dimen>
+    <dimen name="scan_result_top_margin_extra_large">40dp</dimen>
+    <dimen name="scan_result_txt_size">20sp</dimen>
+
+    <dimen name="btn_scan_next_width">190dp</dimen>
+    <dimen name="btn_scan_elevation">5dp</dimen>
+    <dimen name="btn_scan_text_size">18sp</dimen>
+    <dimen name="btn_scan_corner_radius">3dp</dimen>
+    <dimen name="btn_scan_stroke_width">5px</dimen>
+
+    <dimen name="toolbar_btn_left_margin">10dp</dimen>
+    <dimen name="toolbar_btn_right_margin">10dp</dimen>
+    <dimen name="flash_btn_right_margin">5dp</dimen>
+
+</resources>

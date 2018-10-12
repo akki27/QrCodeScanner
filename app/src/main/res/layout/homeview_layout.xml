@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.HomeActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_large"
+        card_view:cardBackgroundColor="@color/windowBackground95"
+        card_view:cardCornerRadius="@dimen/login_card_radius"
+        card_view:cardElevation="@dimen/login_card_radius">
+
+        <TextView
+            android:id="@+id/txt_hint_start_scan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:gravity="center"
+            android:text="@string/txt_hint_start_scanner"
+            android:textSize="@dimen/text_size_semi_large"
+            android:textColor="@color/black_opac_54"
+            android:textStyle="bold"/>
+
+        <!-- Scanner Layout -->
+        <LinearLayout
+            android:id="@+id/layout_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/scanner_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/barcode_capture" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:text="@string/scan_in_progress" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <!-- Temp Layout: QR Code Data values Layout ==> Will be replaced by layout_scan_result_success later -->
+        <LinearLayout
+            android:id="@+id/layout_scan_result_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/scan_result_top_margin_large"
+                android:background="@null"
+                android:contentDescription="@string/valid_ticket_content_description"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_check_circle_black_48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:text="@string/label_valid_ticket"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/scan_result_txt_size" />
+
+            <RelativeLayout
+                android:id="@+id/format_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin_medium">
+
+                <TextView
+                    android:id="@+id/label_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_ticket_format"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/label_format"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/value_format_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin">
+
+                <TextView
+                    android:id="@+id/label_value_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_ticket_value_format"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_value_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/label_value_format"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/display_value_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin">
+
+                <TextView
+                    android:id="@+id/label_display_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_ticket_display_value"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_display_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/label_display_value"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_scan_next"
+                android:layout_width="@dimen/btn_scan_next_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:background="@drawable/button_bg"
+                android:elevation="@dimen/btn_scan_elevation"
+                android:text="@string/btn_text_scan_next"
+                android:textSize="@dimen/btn_scan_text_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Scan Result Success Layout -->
+        <!--<LinearLayout
+            android:id="@+id/layout_scan_result_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/scan_result_top_margin_large"
+                android:background="@null"
+                android:contentDescription="@string/valid_ticket_content_description"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_check_circle_black_48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:text="@string/label_valid_ticket"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/scan_result_txt_size" />
+
+            <RelativeLayout
+                android:id="@+id/price_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin_medium">
+
+                <TextView
+                    android:id="@+id/label_ticket_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_ticket_price"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_ticket_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/label_ticket_price"
+                    android:text=" Rs. 10"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nationality_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin">
+
+                <TextView
+                    android:id="@+id/label_nationality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_nationality"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_nationality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/label_nationality"
+                    android:text=" Indian"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/validity_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin">
+
+                <TextView
+                    android:id="@+id/label_validity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_valid_for"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_validity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/label_validity"
+                    android:text=" 20th Nov, 2017"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/type_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin">
+
+                <TextView
+                    android:id="@+id/label_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_type"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_ticket_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/label_type"
+                    android:text=" Adult"
+                    android:textSize="@dimen/scan_result_txt_size" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_scan_next"
+                android:layout_width="@dimen/btn_scan_next_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:background="@drawable/button_bg"
+                android:elevation="@dimen/btn_scan_elevation"
+                android:text="@string/btn_text_scan_next"
+                android:textSize="@dimen/btn_scan_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:text="@string/label_ticket_count"
+                android:textSize="@dimen/scan_result_txt_size" />
+
+            <TextView
+                android:id="@+id/txt_ticket_count_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:text="2341"
+                android:textSize="@dimen/scan_result_txt_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>-->
+
+        <!-- Scan result failure layout -->
+        <LinearLayout
+            android:id="@+id/layout_scan_result_fail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/scan_result_top_margin_large"
+                android:background="@null"
+                android:contentDescription="@string/invalid_ticket_content_description"
+                android:tint="@color/error_red"
+                app:srcCompat="@drawable/ic_close_black_48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:text="@string/label_invalid_ticket"
+                android:textColor="@color/error_red"
+                android:textSize="@dimen/scan_result_txt_size" />
+
+            <TextView
+                android:id="@+id/label_fail_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin_large"
+                android:text="@string/label_fail_reason"
+                android:textSize="@dimen/scan_result_txt_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_fail_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin_small"
+                android:text=" Validity Expired"
+                android:textSize="@dimen/scan_result_txt_size" />
+
+            <Button
+                android:id="@+id/btn_resume_scanning"
+                android:layout_width="@dimen/btn_scan_next_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin_extra_large"
+                android:background="@drawable/button_bg"
+                android:elevation="@dimen/btn_scan_elevation"
+                android:text="@string/btn_resume_scanning"
+                android:textSize="@dimen/btn_scan_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin_extra_large"
+                android:text="@string/label_ticket_count"
+                android:textSize="@dimen/scan_result_txt_size" />
+
+            <TextView
+                android:id="@+id/txt_ticket_count_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/scan_result_top_margin"
+                android:text="2341"
+                android:textSize="@dimen/scan_result_txt_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

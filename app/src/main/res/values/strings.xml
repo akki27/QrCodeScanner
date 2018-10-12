@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">QrCodeScanner</string>
+    <string name="error_offline_text">You are currently offline. Please connect to internet and try again.</string>
+    <string name="api_in_progress_message">Please wait until background task get completed.</string>
+
+    <string name="label_login_help">Enter your login credentials</string>
+    <string name="label_user_name">Username</string>
+    <string name="label_user_password">Password</string>
+    <string name="default_monument_name">Monument Name</string>
+
+    <!-- Error Messages -->
+    <string name="msg_internet_unavailable">Internet Unavaibale</string>
+    <string name="msg_monument_not_selected">Please select monument name</string>
+    <string name="msg_username_empty">Username can not be empty</string>
+    <string name="msg_username_invalid">Please provide a valid username</string>
+    <string name="msg_password_empty">Password can not be empty</string>
+    <string name="msg_password_invalid">Please provide a valid password</string>
+
+
+    <string-array name="monument_name">
+        <item>Monument Name</item>
+        <item>Monument1</item>
+        <item>Monument2</item>
+        <item>Monumet3</item>
+    </string-array>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    //Drawer texts
+    <string name="txt_guest_welcome">Welcome Guest!</string>
+    <string name="txt_user_welcome">Welcome!</string>
+    <string name="txt_login_or_register">Login or Register</string>
+    <string name="txt_username_default">Hughes Systique</string>
+    <string name="txt_logout">Logout</string>
+    <string name="txt_scan_stats">Stats</string>
+    <string name="txt_settings">Settings</string>
+    <string name="txt_communicate">Communicate</string>
+    <string name="txt_share">Share</string>
+    <string name="txt_send">Send</string>
+    <string name="txt_report">Report</string>
+
+    <!-- Scan Result Success -->
+    <string name="label_valid_ticket">Valid Ticket</string>
+    <string name="label_ticket_price">Ticket Price - </string>
+    <string name="label_nationality">Nationality - </string>
+    <string name="label_valid_for">Valid for - </string>
+    <string name="label_type">Type - </string>
+    <string name="btn_text_scan_next">Scan Next </string>
+    <string name="label_ticket_count">Today\u0027s Ticket Count</string>
+    <string name="valid_ticket_content_description">This is a valid ticket</string>
+    <string name="invalid_ticket_content_description">This is an invalid ticket</string>
+    <string name="close_camera_view_description">Close Camera View</string>
+
+    <!-- Temp Strings: It will be replaced for "Scan Result Success" -->
+    <string name="label_ticket_format">Format: </string>
+    <string name="label_ticket_value_format">Value Format: </string>
+    <string name="label_ticket_display_value">Display Value: </string>
+
+    <!-- Scan Result Fail -->
+    <string name="label_invalid_ticket">Invalid Ticket</string>
+    <string name="label_fail_reason">Reason:</string>
+    <string name="btn_resume_scanning">Back to Scanning</string>
+
+
+    <!-- Barcode strings -->
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Barcode Reader Sample</string>
+    <string name="barcode_header">Click &quot;Read Barcode&quot; to read a barcode</string>
+    <string name="read_barcode">Read Barcode</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="barcode_success">Barcode read successfully</string>
+    <string name="barcode_failure">No barcode captured</string>
+    <string name="barcode_error">"Error reading barcode: %1$s"</string>
+    <string name="scan_in_progress">Scanning in Progress...</string>
+
+    <!-- Toolbar -->
+    <string name="flash_on">ON</string>
+    <string name="flash_off">OFF</string>
+    <string name="monument_name_placeholder">Monument Name Here</string>
+    <string name="start_stop_scanner_description">start-stop scanner</string>
+
+    <string name="txt_hint_start_scanner">Click start button to scan.</string>
+
+    <string name="camera_pinch_zoom_hint">Pinch/Stretch to zoom </string>
+
+
+</resources>

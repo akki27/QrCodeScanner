@@ -1,0 +1,10 @@
+<com.akki.qrcodescanner.home.HomeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_home_view"
+    android:layout_width="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_height="match_parent"
+    tools:context="com.akki.qrcodescanner.home.HomeActivity"
+    android:layout_centerHorizontal="true">
+
+</com.akki.qrcodescanner.home.HomeView>

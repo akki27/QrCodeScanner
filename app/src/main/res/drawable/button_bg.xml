@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+  android:shape="rectangle">
+  <gradient android:startColor="@color/textColorPrimary"
+    android:endColor="@color/color_light_blue"
+    android:angle="270" />
+  <corners android:radius="@dimen/btn_scan_corner_radius" />
+  <stroke android:width="@dimen/btn_scan_stroke_width" android:color="@color/navigationBarColor" />
+</shape>

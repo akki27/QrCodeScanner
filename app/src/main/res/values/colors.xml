@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#8BC34A</color>
+
+    <color name="windowBackgroundSecondary">#FAFAFA</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#F2FFFFFF</color>
+    <color name="windowBackground95">#F2FFFFFF</color>
+    <color name="filter_secondary_bg">#EEEAEA</color>
+
+    <color name="black_opac">#DE000000</color>  <!-- BLACK with 87% opacity -->
+    <color name="label_floating_opac_38">#61000000</color>   <!-- BLACK with 38% opacity -->
+    <color name="black_50opac">#80000000</color>
+    <color name="black_opac_54">#8A000000</color>
+
+    <color name="error_red">#F44336</color>
+    <color name="light_gray">#BDBDBD</color>
+
+    <color name="color_light_blue">#33A1DE</color>
+</resources>
